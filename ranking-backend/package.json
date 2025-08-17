@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env PORT=$PORT npx json-server --watch db.json --port $PORT"
+    "start": "cross-env PORT=$PORT npx json-server --watch db.json --host 0.0.0.0 --port $PORT"
   },
   "keywords": [],
   "author": "",
@@ -15,3 +15,4 @@
     "json-server": "^0.17.4"
   }
 }
+
