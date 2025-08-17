@@ -3,6 +3,13 @@
 // URL base da API.
 const API_URL = 'http://localhost:3000'; 
 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
 // Funções de formatação de valores monetários e percentuais.
 const formatCurrency = (value) => `R$${value.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
 const formatPercentage = (value) => `${value.toFixed(0)}%`;
@@ -288,4 +295,5 @@ themeToggle.addEventListener('click', () => {
 // Inicializa a aplicação ao carregar a página.
 document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderDashboard();
+
 });
