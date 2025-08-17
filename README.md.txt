@@ -1,0 +1,1 @@
+Esta aplicação é voltada para um time comercial ter base de seus resultados para atingimento de meta, percentual atingido, valor faltante para meta, bem como meta do time e resultado do time todo, voltado a ranquear e escalar os melhores resultados do time.
