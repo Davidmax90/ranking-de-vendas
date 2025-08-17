@@ -568,4 +568,12 @@ body.dark-mode .info-box .title,
 body.dark-mode .info-box .subtitle,
 body.dark-mode .info-box .call-to-action {
     color: #fff; /* Cores mais brilhantes para títulos e negritos */
+
+}
+
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
 }
