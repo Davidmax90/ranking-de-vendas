@@ -1,7 +1,7 @@
 // script.js: Lógica principal da aplicação, comunicação com a API e manipulação da interface.
 
 // URL base da API.
-const API_URL = 'http://localhost:3000'; 
+const API_URL = 'https://ranking-api-lyux.onrender.com'; 
 
 const PORT = process.env.PORT || 3000;
 
@@ -297,3 +297,4 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderDashboard();
 
 });
+
