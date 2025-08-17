@@ -271,7 +271,7 @@ body.dark-mode .modal-content {
     display: block;
     font-weight: 700;
     font-size: 1.8em;
-    color: 007bff;
+    color: #007bff;
     margin-bottom: 10px;
 }
 
@@ -575,4 +575,5 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-family: Arial, sans-serif;
+
 }
