@@ -1,0 +1,76 @@
+{
+  "sellers": [
+    {
+      "id": "1",
+      "name": "Raul",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/lider-raul.png",
+      "role": "leader"
+    },
+    {
+      "id": "2",
+      "name": "Alex",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/alex.png",
+      "role": "member"
+    },
+    {
+      "id": "3",
+      "name": "Amanda",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/amanda.png",
+      "role": "member"
+    },
+    {
+      "id": "4",
+      "name": "André",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/andre.png",
+      "role": "member"
+    },
+    {
+      "id": "5",
+      "name": "Davi",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/davi.png",
+      "role": "member"
+    },
+    {
+      "id": "6",
+      "name": "David",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/david.png",
+      "role": "member"
+    },
+    {
+      "id": "7",
+      "name": "Everton",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/everton.png",
+      "role": "member"
+    },
+    {
+      "id": "8",
+      "name": "Emerson",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/emerson.png",
+      "role": "member"
+    },
+    {
+      "id": "9",
+      "name": "João",
+      "meta": 0,
+      "resultado": 0,
+      "image": "images/joao.png",
+      "role": "member"
+    }
+  ]
+}
