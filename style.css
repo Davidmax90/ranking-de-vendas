@@ -56,9 +56,9 @@ body.dark-mode .modal-content {
 
 /* -- Cabeçalho e Cards -- */
 .squad-header {
-    display: relative; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
     max-width: 1200px;
     margin-bottom: 30px;
@@ -84,7 +84,7 @@ body.dark-mode .modal-content {
     border: 3px solid transparent;
     transition: border-color 0.3s;
     display: flex;
-    flex-direction: column; /* CORRIGIDO: de 'center' para 'column' */
+    flex-direction: column;
     align-items: center;
     flex: 1;
 }
