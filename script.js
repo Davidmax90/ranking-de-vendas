@@ -16,7 +16,7 @@ const getContrastColor = (backgroundColor) => {
             r = parseInt(hex[1] + hex[1], 16);
             g = parseInt(hex[2] + hex[2], 16);
             b = parseInt(hex[3] + hex[3], 16);
-        } else if (hex.length == 7) {
+        } else if (hex.length == 7 || hex.length == 9) {
             r = parseInt(hex.substring(1, 3), 16);
             g = parseInt(hex.substring(3, 5), 16);
             b = parseInt(hex.substring(5, 7), 16);
@@ -37,14 +37,14 @@ const getBorderAndBgColor = (percentage) => {
     
     // As cores são definidas em formato hexadecimal para que a função getContrastColor funcione.
     if (percentage === 0) { borderColor = '#00000000'; bgColor = '#00000000'; }
-    else if (percentage >= 1 && percentage < 70) { borderColor = '#333333ff'; bgColor = '#333333ff'; }
-    else if (percentage >= 70 && percentage < 85) { borderColor = '#ff0000ff'; bgColor = '#ff0000ff'; }
+    else if (percentage >= 1 && percentage < 70) { borderColor = '#333333'; bgColor = '#333333'; }
+    else if (percentage >= 70 && percentage < 85) { borderColor = '#ff0000'; bgColor = '#ff0000'; }
     else if (percentage >= 85 && percentage < 100) { borderColor = '#ffc107'; bgColor = '#ffc107'; }
     else if (percentage >= 100 && percentage < 110) { borderColor = '#28a745'; bgColor = '#28a745'; }
     else if (percentage >= 110 && percentage < 140) { borderColor = '#007bff'; bgColor = '#007bff'; }
     else if (percentage >= 140 && percentage < 150) { borderColor = '#00008b'; bgColor = '#00008b'; }
-    else if (percentage >= 150 && percentage < 200) { borderColor = '#b700ffff'; bgColor = '#b700ffff'; }
-    else if (percentage >= 200) { borderColor = '#000000ff'; bgColor = '#000000ff'; }
+    else if (percentage >= 150 && percentage < 200) { borderColor = '#b700ff'; bgColor = '#b700ff'; }
+    else if (percentage >= 200) { borderColor = '#000000'; bgColor = '#000000'; }
     
     // Cor de texto é determinada com base na cor de fundo.
     const textColor = getContrastColor(bgColor);
@@ -80,7 +80,7 @@ const createSellerCard = (person, rank) => {
         <span class="seller-name">${person.name.toUpperCase()}</span>
         <span class="seller-percentage">${formatPercentage(person.percentage)}</span>
         <div class="seller-stats">
-            <div class="stats-box meta-box" style="background-color: #333333ff; color: #fff;">
+            <div class="stats-box meta-box" style="background-color: #333333; color: #fff;">
                 <span class="stats-label">META</span>
                 <span class="stats-value">${formatCurrency(person.meta)}</span>
             </div>
@@ -88,7 +88,7 @@ const createSellerCard = (person, rank) => {
                 <span class="stats-label">RESULTADO</span>
                 <span class="stats-value">${formatCurrency(person.resultado)}</span>
             </div>
-            <div class="stats-box falta-box" style="background-color: #333333ff; color: #fff;">
+            <div class="stats-box falta-box" style="background-color: #333333; color: #fff;">
                 <span class="stats-label">FALTA</span>
                 <span class="stats-value">${formatCurrency(person.falta)}</span>
             </div>
@@ -145,7 +145,7 @@ const fetchAndRenderDashboard = async () => {
                 </div>
             </div>
             <div class="squad-stats-container">                
-                <div class="stats-box meta-box" style="background-color: #333333ff; color: #fff;">
+                <div class="stats-box meta-box" style="background-color: #333333; color: #fff;">
                     <span class="stats-label">META</span>
                     <span class="stats-value">${formatCurrency(squadMeta)}</span>
                 </div>
@@ -153,7 +153,7 @@ const fetchAndRenderDashboard = async () => {
                     <span class="stats-label">RESULTADO</span>
                     <span class="stats-value">${formatCurrency(squadResultado)}</span>
                 </div>
-                <div class="stats-box falta-box" style="background-color: #333333ff; color: #fff;">
+                <div class="stats-box falta-box" style="background-color: #333333; color: #fff;">
                     <span class="stats-label">FALTA</span>
                     <span class="stats-value">${formatCurrency(squadFalta)}</span>
                 </div>
@@ -289,4 +289,3 @@ themeToggle.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderDashboard();
 });
-
