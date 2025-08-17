@@ -1,7 +1,7 @@
 // script.js: Lógica principal da aplicação, comunicação com a API e manipulação da interface.
 
 // URL base da API.
-const API_URL = 'https://ranking-api-lyux.onrender.com';
+const API_URL = 'https://ranking-api-fyba.onrender.com';
 
 // Funções de formatação de valores monetários e percentuais.
 const formatCurrency = (value) => `R$${value.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
@@ -289,3 +289,4 @@ themeToggle.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderDashboard();
 });
+
