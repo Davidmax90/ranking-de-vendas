@@ -870,7 +870,7 @@ footer {
                 const members = sellersWithCalculations.filter(s => s.role === 'member');
                 
                 // Calcula os totais do squad.
-                const squadMeta = sellersWithCalculations.reduce((sum, s) => sum + parseFloat(s.meta), 0);
+                const squadMeta = members.reduce((sum, s) => sum + parseFloat(s.meta), 0);
                 const squadResultado = sellersWithCalculations.reduce((sum, s) => sum + parseFloat(s.resultado), 0);
                 const squadFalta = squadMeta - squadResultado;
                 const squadPercentage = squadMeta > 0 ? (squadResultado / squadMeta) * 100 : 0;
@@ -1047,3 +1047,4 @@ footer {
     </script>
 </body>
 </html>
+
