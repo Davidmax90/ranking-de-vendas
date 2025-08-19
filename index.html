@@ -933,42 +933,44 @@
             }
         });
 
-        dataForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const selectedName = sellerSelect.value;
-            const newMeta = parseFloat(metaInput.value);
-            const newResultado = parseFloat(resultadoInput.value);
+       dataForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const selectedName = sellerSelect.value;
+    const newMeta = parseFloat(metaInput.value);
+    const newResultado = parseFloat(resultadoInput.value);
 
-            const response = await fetch(`${API_URL}/sellers?name=${selectedName}`);
-            const sellerToUpdate = (await response.json())[0];
+    // Altere esta linha para buscar o vendedor pelo NOME na URL,
+    // em vez de usar uma query parameter.
+    const response = await fetch(`${API_URL}/sellers/${selectedName}`);
+    const sellerToUpdate = (await response.json()); // Não precisa mais do [0]
 
-            if (sellerToUpdate) {
-                try {
-                    const updateResponse = await fetch(`${API_URL}/sellers/${sellerToUpdate.id}`, {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            ...sellerToUpdate,
-                            meta: newMeta,
-                            resultado: newResultado
-                        })
-                    });
+    if (sellerToUpdate) {
+        try {
+            const updateResponse = await fetch(`${API_URL}/sellers/${sellerToUpdate.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...sellerToUpdate,
+                    meta: newMeta,
+                    resultado: newResultado
+                })
+            });
 
-                    if (updateResponse.ok) {
-                        modal.style.display = 'none';
-                        fetchAndRenderDashboard();
-                    } else {
-                        alert('Erro ao salvar os dados.');
-                    }
-                } catch (error) {
-                    console.error('Erro na requisição PUT:', error);
-                    alert('Erro ao salvar os dados. Tente novamente.');
-                }
+            if (updateResponse.ok) {
+                modal.style.display = 'none';
+                fetchAndRenderDashboard();
             } else {
-                alert('Closer não encontrado.');
+                alert('Erro ao salvar os dados.');
             }
-        });
+        } catch (error) {
+            console.error('Erro na requisição PUT:', error);
+            alert('Erro ao salvar os dados. Tente novamente.');
+        }
+    } else {
+        alert('Closer não encontrado.');
+    }
+});
 
         // Lógica para o tema claro/escuro, mantida.
         const themeToggle = document.getElementById('theme-toggle');
@@ -997,5 +999,6 @@
     </script>
 </body>
 </html>
+
 
 
