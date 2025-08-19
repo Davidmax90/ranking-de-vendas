@@ -810,8 +810,12 @@
 
                 // Calcula os dados de meta, resultado e falta para cada vendedor.
                 const sellersWithCalculations = sellers.map(seller => {
-                    const percentage = seller.meta > 0 ? (seller.resultado / seller.meta) * 100 : 0;
-                    const falta = seller.meta - seller.resultado;
+                    // Garanta que os valores são números
+                    const meta = parseFloat(seller.meta);
+                    const resultado = parseFloat(seller.resultado);
+            
+                    const percentage = meta > 0 ? (resultado / meta) * 100 : 0;
+                    const falta = meta - resultado;
                     return { ...seller, percentage, falta };
                 });
 
@@ -999,6 +1003,7 @@
     </script>
 </body>
 </html>
+
 
 
 
