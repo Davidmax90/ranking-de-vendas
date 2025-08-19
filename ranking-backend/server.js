@@ -40,15 +40,15 @@ async function createTable() {
     if (countQuery.rows[0].count == 0) {
       console.log("Tabela vazia. Populando com dados iniciais...");
       const initialData = [
-        { name: "Raul", meta: 0.00, resultado: 0.00, image: "images/lider-raul.png", role: "leader" },
-        { name: "Alex", meta: 0.00, resultado: 0.00, image: "images/alex.png", role: "member" },
-        { name: "Amanda", meta: 0.00, resultado: 0.00, image: "images/amanda.png", role: "member" },
-        { name: "André", meta: 0.00, resultado: 0.00, image: "images/andre.png", role: "member" },
-        { name: "Davi", meta: 0.00, resultado: 0.00, image: "images/davi.png", role: "member" },
-        { name: "David", meta: 0.00, resultado: 0.00, image: "images/david.png", role: "member" },
-        { name: "Everton", meta: 0.00, resultado: 0.00, image: "images/everton.png", role: "member" },
-        { name: "Emerson", meta: 0.00, resultado: 0.00, image: "images/emerson.png", role: "member" },
-        { name: "João", meta: 0.00, resultado: 0.00, image: "images/joao.png", role: "member" }
+        { name: "Raul", meta: 0, resultado: 0, image: "images/lider-raul.png", role: "leader" },
+        { name: "Alex", meta: 0, resultado: 0, image: "images/alex.png", role: "member" },
+        { name: "Amanda", meta: 0, resultado: 0, image: "images/amanda.png", role: "member" },
+        { name: "André", meta: 0, resultado: 0, image: "images/andre.png", role: "member" },
+        { name: "Davi", meta: 0, resultado: 0, image: "images/davi.png", role: "member" },
+        { name: "David", meta: 0, resultado: 0, image: "images/david.png", role: "member" },
+        { name: "Everton", meta: 0, resultado: 0, image: "images/everton.png", role: "member" },
+        { name: "Emerson", meta: 0, resultado: 0, image: "images/emerson.png", role: "member" },
+        { name: "João", meta: 0, resultado: 0, image: "images/joao.png", role: "member" }
       ];
 
       for (const seller of initialData) {
