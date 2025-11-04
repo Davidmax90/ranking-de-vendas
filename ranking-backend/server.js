@@ -44,9 +44,8 @@ async function createTable() {
         { name: "Alex", meta: 0, resultado: 0, image: "images/alex.png", role: "member" },
         { name: "Amanda", meta: 0, resultado: 0, image: "images/amanda.png", role: "member" },
         { name: "André", meta: 0, resultado: 0, image: "images/andre.png", role: "member" },
-        { name: "Davi", meta: 0, resultado: 0, image: "images/davi.png", role: "member" },
         { name: "David", meta: 0, resultado: 0, image: "images/david.png", role: "member" },
-        { name: "Everton", meta: 0, resultado: 0, image: "images/everton.png", role: "member" },
+        { name: "Clailton", meta: 0, resultado: 0, image: "images/clailton.png", role: "member" },
         { name: "Emerson", meta: 0, resultado: 0, image: "images/emerson.png", role: "member" },
         { name: "João", meta: 0, resultado: 0, image: "images/joao.png", role: "member" }
       ];
