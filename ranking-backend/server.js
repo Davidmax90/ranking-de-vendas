@@ -46,7 +46,7 @@ async function createTable() {
         { name: "André", meta: 0, resultado: 0, image: "images/andre.png", role: "member" },
         { name: "David", meta: 0, resultado: 0, image: "images/david.png", role: "member" },
         { name: "Clailton", meta: 0, resultado: 0, image: "images/clailton.png", role: "member" },
-        { name: "Emerson", meta: 0, resultado: 0, image: "images/emerson.png", role: "member" },
+        { name: "Jossiane", meta: 0, resultado: 0, image: "images/jossiane.png", role: "member" },
         { name: "João", meta: 0, resultado: 0, image: "images/joao.png", role: "member" }
       ];
 
